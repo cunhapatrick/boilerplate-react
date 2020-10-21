@@ -8,7 +8,7 @@ const actions = {
 export const buildMapStateToProps = (state, fields = null) => {
 	if (fields === null) {
 		return {
-			storeExample: state.storeBuildings,
+			storeExample: state.storeExample,
 		};
 	}
 

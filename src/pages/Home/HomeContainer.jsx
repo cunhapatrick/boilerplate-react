@@ -1,14 +1,31 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 
 /* NOTE
 	This component is responsable for the logic on the component
 */
 
+// Redux store connection
+import withConnect from 'stores/withConnect';
+
+// Page jsx component
 import Home from './Home';
 
-const HomeContainer = () => <Home />;
+// PropTypes
+import { HomeContainerPropTypes } from './types';
 
-HomeContainer.propTypes = {};
+const HomeContainer = ({ storeExample, exampleRequest }) => {
+	// ComponentDidMount alike
+	useEffect(() => {
+		exampleRequest({});
+	}, []);
+	const { currentExample } = storeExample;
 
-export default HomeContainer;
+	return <Home currentExample={currentExample} />;
+};
+
+HomeContainer.propTypes = HomeContainerPropTypes;
+
+// com seleção de store
+// export default withConnect(HomeContainer, ['storeExample']);
+// com todos os stores
+export default withConnect(HomeContainer);

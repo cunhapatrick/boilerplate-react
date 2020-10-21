@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Components
-import Home from 'pages/Home/';
+import Home from 'pages/Home';
 
 // Functions
 import { isLogged } from 'services/auth';

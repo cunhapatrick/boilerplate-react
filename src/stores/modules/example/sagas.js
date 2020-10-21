@@ -1,6 +1,7 @@
-import { call, put, all, takeLatest } from 'redux-saga/effects';
+// import { call, put, all, takeLatest } from 'redux-saga/effects';
+import { put, all, takeLatest } from 'redux-saga/effects';
 
-import { publicRequest } from 'services/api';
+// import { publicRequest } from 'services/api';
 
 import {
 	EXAMPLE_TYPE_REQUEST,
@@ -12,11 +13,11 @@ function* fetchExample({ id }) {
 	try {
 		const url = id ? `endpoint/${id}` : `endpoint`;
 
-		const {
-			data: { data },
-		} = yield call(publicRequest.get, url);
-		const payload = id ? { example: data } : { examples: data };
-
+		// const {
+		// 	data: { data },
+		// } = yield call(publicRequest.get, url);
+		// const payload = id ? { example: data } : { examples: data };
+		const payload = { example: url };
 		yield put({ type: EXAMPLE_TYPE_SUCCESS, payload });
 	} catch (error) {
 		const payload = {

@@ -10,7 +10,7 @@ module.exports = function override(config) {
 			config: path.resolve(__dirname, 'src/config'),
 			hocs: path.resolve(__dirname, 'src/hocs'),
 			pages: path.resolve(__dirname, 'src/pages'),
-			store: path.resolve(__dirname, 'src/store'),
+			stores: path.resolve(__dirname, 'src/stores'),
 			styles: path.resolve(__dirname, 'src/styles'),
 			services: path.resolve(__dirname, 'src/services'),
 			utils: path.resolve(__dirname, 'src/utils'),

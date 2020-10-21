@@ -1,6 +1,6 @@
 export default {
 	loaded: false,
-	currentExample: {},
+	currentExample: '',
 	currentExamples: [],
 	total: 0,
 	pages: 0,

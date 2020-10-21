@@ -18,13 +18,13 @@ export default (state = initialState, action) => {
 				draft.loaded = false;
 				draft.error = {};
 				draft.success = '';
-				if (action.payload.id) draft.currentExample = {};
+				if (action.payload.id) draft.currentExample = '';
 				else draft.currentExamples = [];
 			});
 
 		case EXAMPLE_TYPE_SUCCESS:
 			return produce(state, (draft) => {
-				const { example, examples } = action;
+				const { example, examples } = action.payload;
 				draft.loaded = true;
 
 				if (example) {

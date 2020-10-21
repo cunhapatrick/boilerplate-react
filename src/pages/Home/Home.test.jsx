@@ -2,13 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // component
-import HomeContainer from './HomeContainer';
+import Home from './Home';
 
 describe('Component test', () => {
 	let wrapper;
 
 	beforeEach(() => {
-		wrapper = shallow(<HomeContainer />);
+		wrapper = shallow(<Home />);
 	});
 
 	it('should render without crashing', () => {

@@ -6,10 +6,10 @@ import { Provider } from 'react-redux';
 import GlobalStyle from 'styles/global.style';
 
 import Routes from './routes';
-import store from './store';
+import stores from './stores';
 
 const App = () => (
-	<Provider store={store}>
+	<Provider store={stores}>
 		<Router>
 			<Routes />
 			<GlobalStyle />
