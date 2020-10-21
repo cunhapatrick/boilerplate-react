@@ -4,6 +4,7 @@ import React from 'react';
 /* NOTE
 	This component is responsable for the logic on the component
 */
+
 import Home from './Home';
 
 const HomeContainer = () => <Home />;

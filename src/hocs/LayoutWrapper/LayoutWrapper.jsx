@@ -12,11 +12,7 @@ const LayoutWrapper = ({ children }) => {
 	// Some logic
 
 	// High Order Component that wraps the page layout
-	return (
-		<>
-			{cloneElement(children)}
-		</>
-	)
+	return <>{cloneElement(children)}</>;
 };
 
 LayoutWrapper.propTypes = {
